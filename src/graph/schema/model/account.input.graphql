@@ -1,0 +1,38 @@
+input AccountAdd {
+  name: String! = ""
+  gender: Int! = 0
+  birthday: String! = ""
+  phone: String! = ""
+  avatar: String! = ""
+
+  username: String!
+  email: String!
+  password: String!
+  type: Int!
+}
+
+input AccountUpdate {
+  account_id: String
+  name: String
+  gender: Int
+  birthday: Time
+  phone: String
+  avatar: String
+  status: Int
+  type: Int
+}
+
+input AccountChangePassword {
+  password: String!
+  confirm_password: String!
+  new_password: String!
+}
+
+input AccountSetPassword {
+  account_id: String!
+  new_password: String!
+}
+
+input AccountDelete {
+  account_id: String!
+}

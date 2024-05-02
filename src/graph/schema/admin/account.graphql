@@ -1,0 +1,13 @@
+extend type Query {
+	accountMe: Account! @requiredAuthAdmin
+	accountPagination(page: Int!, limit: Int!, order_by: String, search: Map): AccountPagination! @requiredAuthAdmin
+	accountDetailBySearch(key: String!): Account! @requiredAuthAdmin
+}
+
+extend type Mutation {
+	accountAdd(data: AccountAdd!): Account! @requiredAuthAdmin
+	accountUpdate(data: AccountUpdate!): Account! @requiredAuthAdmin
+	accountChangePassword(data: AccountChangePassword!): Account! @requiredAuthAdmin
+	accountSetPassword(data: AccountSetPassword!): Account! @requiredAuthAdmin
+  	accountDelete(data: AccountDelete!): Account! @requiredAuthAdmin
+}

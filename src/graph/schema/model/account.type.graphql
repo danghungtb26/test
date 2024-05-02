@@ -1,0 +1,13 @@
+type Account {
+    id: String!
+    user_name: String!
+    email: String!
+    password: String!
+    created_at: Time!
+    updated_at: Time!
+}
+
+type AccountPagination {
+  rows: [Account!]!
+  paging: Pagination!
+}

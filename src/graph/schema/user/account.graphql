@@ -1,0 +1,7 @@
+extend type Query {
+	accountMe: Account! 
+}
+
+extend type Mutation {
+	accountUpdate(data: AccountUpdate!): Account!
+}
